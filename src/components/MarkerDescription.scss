@@ -1,0 +1,7 @@
+.marker-description {
+  @apply bg-my-purple p-6 whitespace-break-spaces text-gray-50;
+
+  &::selection {
+    @apply bg-my-lemon text-gray-950;
+  }
+}
