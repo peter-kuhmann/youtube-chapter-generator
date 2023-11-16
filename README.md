@@ -13,16 +13,12 @@ copy the chapter description.
 <!-- TOC -->
 * [Table of contents](#table-of-contents)
 * [Service URL](#service-url)
-* [Tutorial](#tutorial)
 * [Tech stack](#tech-stack)
 * [Problem found](#problem-found)
 <!-- TOC -->
 
 # Service URL
 [➡️ https://yt-chapter-generator.peter-kuhmann.de](https://yt-chapter-generator.peter-kuhmann.de)
-
-# Tutorial
-[➡️ Video tutorial](docs/yt-chapter-generator-tutorial.mp4)
 
 # Tech stack
 - Next.js
