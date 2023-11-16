@@ -1,23 +1,27 @@
 ![Banner of the YouTube chapter generator](docs/docs-logo.jpg)
 
+[➡️ https://yt-chapter-generator.peter-kuhmann.de](https://yt-chapter-generator.peter-kuhmann.de)
+
 This web tool allows you to generate a YouTube chapter description
 based on your Final Cut Pro poject markers.
 
 Just export your FCP project to XML, select the file, and you can
 copy the chapter description.
 
-[➡️ Use the tool now for free 🔗](https://yt-chapter-generator.peter-kuhmann.de/)
-
 # Table of contents
 
 <!-- TOC -->
 * [Table of contents](#table-of-contents)
-* [YouTube tutorial](#youtube-tutorial)
+* [Service URL](#service-url)
+* [Tutorial](#tutorial)
 * [Tech stack](#tech-stack)
 * [Problem found](#problem-found)
 <!-- TOC -->
 
-# YouTube tutorial
+# Service URL
+[➡️ https://yt-chapter-generator.peter-kuhmann.de](https://yt-chapter-generator.peter-kuhmann.de)
+
+# Tutorial
 
 _to be uploaded_
 
