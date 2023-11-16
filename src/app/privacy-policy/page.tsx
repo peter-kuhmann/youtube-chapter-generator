@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | YouTube chapter generator",
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <div className={"container prose dark:prose-invert"}>
