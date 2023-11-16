@@ -22,8 +22,7 @@ copy the chapter description.
 [➡️ https://yt-chapter-generator.peter-kuhmann.de](https://yt-chapter-generator.peter-kuhmann.de)
 
 # Tutorial
-
-_to be uploaded_
+[➡️ Video tutorial](docs/yt-chapter-generator-tutorial.mp4)
 
 # Tech stack
 - Next.js
