@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Banner of the YouTube chapter generator](docs/docs-logo.jpg)
 
-## Getting Started
+This web tool allows you to generate a YouTube chapter description
+based on your Final Cut Pro poject markers.
 
-First, run the development server:
+Just export your FCP project to XML, select the file, and you can
+copy the chapter description.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[➡️ Use the tool now for free 🔗](https://yt-chapter-generator.peter-kuhmann.de/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Table of contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<!-- TOC -->
+* [Table of contents](#table-of-contents)
+* [YouTube tutorial](#youtube-tutorial)
+* [Tech stack](#tech-stack)
+* [Problem found](#problem-found)
+<!-- TOC -->
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# YouTube tutorial
 
-## Learn More
+_to be uploaded_
 
-To learn more about Next.js, take a look at the following resources:
+# Tech stack
+- Next.js
+- React
+- Tailwind
+- zip.js
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Problem found
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please open a GitHub issue OR send a mail to [info@peter-kuhmann.de](mailto:info@peter-kuhmann.de).
