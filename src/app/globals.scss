@@ -20,7 +20,7 @@ body {
     @apply w-full max-w-[50rem] mx-auto px-8;
 }
 
-button {
+.defaultButtonStyle {
     @apply bg-my-purple text-gray-50;
     @apply px-4 py-1;
 
@@ -31,4 +31,12 @@ button {
     &:disabled {
         @apply bg-gray-500 cursor-not-allowed;
     }
+}
+
+button {
+    @apply defaultButtonStyle;
+}
+
+a:not(.no-default-style) {
+    @apply defaultButtonStyle;
 }
