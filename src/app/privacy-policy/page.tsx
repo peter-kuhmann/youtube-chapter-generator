@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | YouTube chapter generator",
+  metadataBase: new URL('https://yt-chapter-generator.peter-kuhmann.de'),
 };
 
 export default function PrivacyPolicyPage() {
