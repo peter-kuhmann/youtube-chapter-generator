@@ -33,7 +33,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <div className={"flex flex-row gap-4 items-center"}>
+      <div className={"flex flex-row gap-4 items-center flex-wrap"}>
         <a href={"https://www.peter-kuhmann.de"}>Website</a>
         <a href={"https://www.peter-kuhmann.de/impressum"}>Imprint</a>
         <Link href={"/privacy-policy"}>Privacy Policy</Link>
