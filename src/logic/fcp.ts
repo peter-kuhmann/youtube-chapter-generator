@@ -6,17 +6,32 @@ export function extractMarkersFromFcpXml(fcpXml: string): Marker[] {
   const xmlDom = xmlParser.parseFromString(fcpXml, "text/xml");
 
   const assetClipsWithMarkers: {
-    assetClip: FcpAssetClip;
+    assetClips: FcpAssetClip[];
     marker: FcpMarker;
-  }[] = Array.from(xmlDom.querySelectorAll("marker")).map((marker) => {
-    const parentAssetClip = marker.closest("asset-clip");
-    if (!parentAssetClip) throw new Error("Could not find parent asset-clip.");
+  }[] = Array.from(xmlDom.querySelectorAll("marker, chapter-marker")).map((marker) => {
+    const parentAssetClips : Element[] = []
+
+    let currentMarkerSearchNode = marker.parentElement
+    while ( currentMarkerSearchNode ) {
+      const parentAssetClip = currentMarkerSearchNode.closest("asset-clip")
+
+      if ( parentAssetClip ) {
+        currentMarkerSearchNode = parentAssetClip.parentElement
+        parentAssetClips.push(parentAssetClip)
+      } else {
+        break
+      }
+    }
+
+    if ( parentAssetClips.length === 0 ) throw new Error("Did not found any parent asset-clip elements for the marker.")
 
     return {
-      assetClip: {
-        start: parentAssetClip.getAttribute("start") ?? "",
-        offset: parentAssetClip.getAttribute("offset") ?? "",
-      },
+      assetClips: parentAssetClips.map(parentAssetClip => {
+        return {
+            start: parentAssetClip.getAttribute("start") ?? "",
+            offset: parentAssetClip.getAttribute("offset") ?? "",
+        }
+      }),
       marker: {
         start: marker.getAttribute("start") ?? "",
         value: marker.getAttribute("value") ?? "",
@@ -25,13 +40,37 @@ export function extractMarkersFromFcpXml(fcpXml: string): Marker[] {
   });
 
   // Now we convert FCP times to readable marker data
-  return assetClipsWithMarkers.map(({ assetClip, marker }) => {
-    const assetClipStart = convertFcpTimeToSeconds(assetClip.start);
-    const assetClipOffset = convertFcpTimeToSeconds(assetClip.offset);
-    const markerStart = convertFcpTimeToSeconds(marker.start);
+  return assetClipsWithMarkers.map(({ assetClips, marker }) => {
+    let times : {start: number, offset: number}[] = [{
+      start: convertFcpTimeToSeconds(marker.start),
+      offset: 0
+    }]
+
+    assetClips.forEach(assetClip => {
+      times.push({
+        start: convertFcpTimeToSeconds(assetClip.start),
+        offset: convertFcpTimeToSeconds(assetClip.offset)
+      })
+    })
+
+    times.reverse()
+
+    let head = 0
+    let parentStart = 0
+
+    for ( let i = 0; i < times.length; i++ ) {
+      if ( i === times.length - 1 ) {
+        // Last element (marker)
+        head += times[i].start - parentStart
+      } else {
+        // asset-clips
+        head += times[i].offset - parentStart
+        parentStart = times[i].start
+      }
+    }
 
     return {
-      startSeconds: Math.floor(markerStart - assetClipStart + assetClipOffset),
+      startSeconds: head,
       label: marker.value,
     };
   });

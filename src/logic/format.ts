@@ -1,5 +1,5 @@
 export function formatSecondsAsChapterTimestamp(totalSeconds: number): string {
-  const secondsPart = totalSeconds % 60;
+  const secondsPart = Math.floor(totalSeconds % 60);
   const minutesPart = Math.floor(totalSeconds / 60);
   const hoursPart = Math.floor(minutesPart / 60);
 
