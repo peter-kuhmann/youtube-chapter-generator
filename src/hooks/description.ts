@@ -4,7 +4,7 @@ import { formatSecondsAsChapterTimestamp } from "@/logic/format";
 
 export function useMarkersToDescription(markers: Marker[]): string {
   return useMemo(() => {
-    return markers
+    return "Timestamps:\n" + markers
       .map((marker) => {
         return `${formatSecondsAsChapterTimestamp(marker.startSeconds)} ${
           marker.label
