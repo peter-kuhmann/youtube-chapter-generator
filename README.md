@@ -28,6 +28,9 @@ copy the chapter description.
 
 ![Supported markers highlighted in a FCP timeline](docs/supported-markers.jpg)
 
+# YouTube video
+Related YouTube video: [https://youtu.be/1JyTqRTcRHk 🔗](https://youtu.be/1JyTqRTcRHk)
+
 # Tech stack
 - Next.js
 - React
