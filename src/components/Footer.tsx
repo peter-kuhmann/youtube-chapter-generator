@@ -35,7 +35,7 @@ export default function Footer() {
 
       <div className={"flex flex-row gap-4 items-center flex-wrap"}>
         <a href={"https://www.peter-kuhmann.de"}>Website</a>
-        <a href={"https://www.peter-kuhmann.de/impressum"}>Imprint</a>
+        <a href={"https://www.peter-kuhmann.de/imprint"}>Imprint</a>
         <Link href={"/privacy-policy"}>Privacy Policy</Link>
         <a href={"https://github.com/peter-kuhmann/youtube-chapter-generator"}>GitHub Repository</a>
       </div>
