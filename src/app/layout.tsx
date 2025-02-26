@@ -18,7 +18,7 @@ export default function RootLayout({
         <script
             defer
             src="https://umami.peter-kuhmann.de/script.js"
-            data-website-id="b1e81371-b680-422b-bfa7-3f1438b46d18"
+            data-website-id="7cea2d52-52fa-4071-8526-e07c24348ccd"
         />
     </head>
     <body className={font.className}>
